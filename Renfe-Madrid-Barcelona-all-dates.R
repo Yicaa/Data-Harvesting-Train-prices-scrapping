@@ -257,10 +257,17 @@ train_df <- train_df %>%
 #scrapping_date: The date when the data was scraped.
 #scrapping_web: "Renfe", indicating the data source.
 
+# create file path and file name
+here::here()
+dir.create(here::here("Scrapped data"), showWarnings = FALSE, recursive = TRUE)
+if (!dir.exists(here::here("Scrapped data"))) {
+  print("Directory does not exist!")
+} else {
+  print("Directory exists.")
+}
+file_path <- here::here("Scrapped data", "Renfe.csv")#Constructs the file path using here(), which ensures the file is saved in the current project directory.
 
 # save data
-file_path <- file.path(here(), "Renfe.csv") #Constructs the file path using here(), which ensures the file is saved in the current project directory.
-
 if (!file.exists(file_path)) {
   write_csv(train_df, file_path)  
 } else {
@@ -509,15 +516,24 @@ train_df <- train_df %>%
          duration_raw, duration_min_clean, price, train_company,
          departure_date, scrapping_date, scrapping_web)
 
-# save data
-file_path <- file.path(here(), "Renfe.csv")
+# create file path and file name
+here::here()
+dir.create(here::here("Scrapped data"), showWarnings = FALSE, recursive = TRUE)
+if (!dir.exists(here::here("Scrapped data"))) {
+  print("Directory does not exist!")
+} else {
+  print("Directory exists.")
+}
+file_path <- here::here("Scrapped data", "Renfe.csv")#Constructs the file path using here(), which ensures the file is saved in the current project directory.
 
+# save data
 if (!file.exists(file_path)) {
   write_csv(train_df, file_path)  
 } else {
   write_csv(train_df, file_path, append = TRUE)  
-}
-remDr$close()
+} #If the file doesn’t exist, it creates a new CSV file. If the file already exists, it appends new data to it.
+
+remDr$close() #Closes the Selenium browser session, ensuring no unnecessary browser instances remain open. And ensure not be error.
 
 
 ###########################################################
@@ -761,16 +777,24 @@ train_df <- train_df %>%
          duration_raw, duration_min_clean, price, train_company,
          departure_date, scrapping_date, scrapping_web)
 
-# save data
-file_path <- file.path(here(), "Renfe.csv")
+# create file path and file name
+here::here()
+dir.create(here::here("Scrapped data"), showWarnings = FALSE, recursive = TRUE)
+if (!dir.exists(here::here("Scrapped data"))) {
+  print("Directory does not exist!")
+} else {
+  print("Directory exists.")
+}
+file_path <- here::here("Scrapped data", "Renfe.csv")#Constructs the file path using here(), which ensures the file is saved in the current project directory.
 
+# save data
 if (!file.exists(file_path)) {
   write_csv(train_df, file_path)  
 } else {
   write_csv(train_df, file_path, append = TRUE)  
-}
+} #If the file doesn’t exist, it creates a new CSV file. If the file already exists, it appends new data to it.
 
-remDr$close()
+remDr$close() #Closes the Selenium browser session, ensuring no unnecessary browser instances remain open. And ensure not be error.
 
 
 ###########################################################
@@ -1017,16 +1041,24 @@ train_df <- train_df %>%
          duration_raw, duration_min_clean, price, train_company,
          departure_date, scrapping_date, scrapping_web)
 
-# save data
-file_path <- file.path(here(), "Renfe.csv")
+# create file path and file name
+here::here()
+dir.create(here::here("Scrapped data"), showWarnings = FALSE, recursive = TRUE)
+if (!dir.exists(here::here("Scrapped data"))) {
+  print("Directory does not exist!")
+} else {
+  print("Directory exists.")
+}
+file_path <- here::here("Scrapped data", "Renfe.csv")#Constructs the file path using here(), which ensures the file is saved in the current project directory.
 
+# save data
 if (!file.exists(file_path)) {
   write_csv(train_df, file_path)  
 } else {
   write_csv(train_df, file_path, append = TRUE)  
-}
+} #If the file doesn’t exist, it creates a new CSV file. If the file already exists, it appends new data to it.
 
-remDr$close()
+remDr$close() #Closes the Selenium browser session, ensuring no unnecessary browser instances remain open. And ensure not be error.
 
 
 

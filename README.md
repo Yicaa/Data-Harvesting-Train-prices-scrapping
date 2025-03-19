@@ -464,3 +464,13 @@ if (!file.exists(file_path)) {
 ```
 
 Reduces risk of data loss .Ensures incremental data growth for scalable analysis
+
+
+## Data analysis and visualization
+
+We take advantage of the scrapped data and conduct 3 research questions related to the pricing strategy of these companies.
+All analysis is written in the "Price analysis.Rmd" file and rendered into html ("Price analysis.html") as well, for your convenience to check.
+These 3 research questions are:
+1. Analyze the price trends of train tickets on the different routes and study how the prices vary with the number of days before departure.
+2. Train Ticket Pricing, Travel Duration, and Cost-Effectiveness Analysis by Time Period & Booking Website.
+3. Analyze the price difference between prices on Trainline and prices on official websites (Renfe/Ouigo).
